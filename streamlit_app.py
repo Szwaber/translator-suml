@@ -5,7 +5,7 @@ import time
 @st.cache_resource
 def load_model():
     tok = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-de")
-    mod = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-de", device_map="auto")
+    mod = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-de")
     return tok, mod
 
 with st.spinner("Loading model..."):
